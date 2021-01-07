@@ -1,0 +1,41 @@
+.menu {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 53px;
+    border-bottom: 3px solid var(--main-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #1d1d1d;
+    z-index: 99;
+    &__items {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+    }
+    &__item {
+        margin: 0 20px;
+    }
+    &__link {
+        position: relative;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 500;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all .3s;
+        &:hover {
+            color: var(--main-color);
+        }
+        &_active {
+            color: var(--main-color);
+        }
+    }
+    &_fixed {
+        position: fixed;
+        top: 0;
+    }
+}

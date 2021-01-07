@@ -1,0 +1,104 @@
+.about {
+    position: relative;
+    padding: 100px 0 153px;
+    min-height: 100vh;
+    &__wrapper {
+        margin-top: 40px;
+        display: grid;
+        grid-template: 300px 200px / 370px 570px;
+        grid-gap: 40px 70px;
+        justify-content: center;
+    }
+    &__photo {
+        display: grid;
+        grid-area: 1 / 1 / 3 / 2;
+        transition: all 0.5s;
+        filter: grayscale(100);
+        transform: scale(.95);
+        cursor: pointer;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        &:hover {
+            box-shadow: var(--shadow-color);
+            transform: scale(1);
+            filter: grayscale(0);
+        }
+    }
+    &__resume {
+        &-title {
+            font-family: unrulyness;
+            font-size: 60px;
+            line-height: 60px;
+            font-weight: 700;
+        }
+        &-sub {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 300;
+        }
+        &-divider {
+            margin: 30px 0;
+            border: none;
+            width: 100px;
+            height: 1px;
+            background-color: var(--main-color);
+        }
+        &-text {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.25rem;
+        }
+    }
+    &__advantages {
+        display: grid;
+        grid-template: 1fr / repeat(3, 1fr);
+        column-gap: 40px;
+        &-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-hexagon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90px;
+            height: 100px;
+            clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+            background: var(--main-bg-color);
+            filter: grayscale(100);
+            transition: all .3s;
+            &:hover {
+                filter: grayscale(0);
+            }
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        &-headline {
+            text-align: center;
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: 500;
+        }
+        &-descr {
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.25rem;
+            font-weight: 300;
+        }
+    }
+    &__cv-button {
+        margin: 0 auto;
+        margin-top: 40px;
+        span {
+            margin-right: 6px;
+        }
+    }
+}

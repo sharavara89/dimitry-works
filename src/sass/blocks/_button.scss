@@ -1,0 +1,35 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 199px;
+    height: 62px;
+    border-radius: 33px;
+    background-color: #ffffff;
+    color: var(--main-color);
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    border: none;
+    box-shadow: var(--shadow-color);
+    text-transform: uppercase;
+    transition: all .3s;
+    &:hover, &:focus {
+        color: #ffffff;
+        background: var(--main-bg-color);
+        box-shadow: unset;
+    }
+    &_small {
+        width: 180px;
+        height: 54px;
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+button {
+    &:focus{
+        border: 2px solid var(--main-color);
+        outline: none;
+    }
+}

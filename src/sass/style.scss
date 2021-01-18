@@ -1,13 +1,18 @@
 @import 'libs/bootstrap-reboot.min';
 @import 'libs/font';
-@import 'libs/animate';
+@import 'libs/animations';
 
 @import 'base/vars';
 
 * {
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 p, ol, ul, li, h1, h2, h3, h4, h5, h6 {
@@ -15,7 +20,7 @@ p, ol, ul, li, h1, h2, h3, h4, h5, h6 {
 }
 
 a, input, button {
-    &:focus{
+    &:focus {
         outline-color: var(--main-color);
     }
 }
